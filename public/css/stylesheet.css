@@ -1,0 +1,112 @@
+/* Importation de la police */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+	--primary-color: #4a90e2;
+	--secondary-color: #2c3e50;
+	--background-color: #ecf0f1;
+	--message-bg: #ffffff;
+	--border-radius: 10px;
+	--shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+}
+
+body {
+	background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+	color: #333;
+	padding: 20px;
+}
+
+/* Conteneur du chat */
+.chat-container {
+	max-width: 900px;
+	background: var(--background-color);
+	margin: auto;
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow);
+	overflow: hidden;
+}
+
+.chat-header {
+	background: var(--primary-color);
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top-left-radius: var(--border-radius);
+	border-top-right-radius: var(--border-radius);
+}
+
+.chat-main {
+	display: flex;
+}
+
+.chat-sidebar {
+	background: var(--secondary-color);
+	color: #fff;
+	padding: 20px;
+	flex: 1;
+	border-bottom-left-radius: var(--border-radius);
+}
+
+.chat-messages {
+	flex: 3;
+	padding: 20px;
+	overflow-y: auto;
+	max-height: 500px;
+	background: var(--message-bg);
+}
+
+.chat-messages .message {
+	background: var(--primary-color);
+	color: white;
+	padding: 10px;
+	margin-bottom: 15px;
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow);
+}
+
+.chat-form-container {
+	padding: 15px;
+	background: var(--primary-color);
+	display: flex;
+	gap: 10px;
+}
+
+.chat-form-container input {
+	flex: 1;
+	padding: 10px;
+	border-radius: var(--border-radius);
+	border: none;
+}
+
+.chat-form-container button {
+	background: #2c3e50;
+	color: #fff;
+	border: none;
+	padding: 10px 15px;
+	cursor: pointer;
+	border-radius: var(--border-radius);
+	transition: 0.3s;
+}
+
+.chat-form-container button:hover {
+	background: #1a252f;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+	.chat-sidebar {
+		display: none;
+	}
+}
